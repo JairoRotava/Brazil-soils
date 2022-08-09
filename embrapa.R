@@ -5,6 +5,9 @@ read_embrapa <- function(x) {
                    header = TRUE, skip = 2, fileEncoding="latin1")
   
   # Faz limpeza do cabecalho
+  # Cabecalho nao pode comecar com numero, por isso adiciona um x na frente.
+  # Espacos e caracteres invalidos sao subsituidos por ponto (.).
+  
   # Remove acentos
   colnames(data) <- stri_trans_general(str = colnames(data), id = "Latin-ASCII")
   # transforma para lowercase
