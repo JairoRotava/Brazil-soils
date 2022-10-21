@@ -84,7 +84,7 @@ plot_sites <- function (lon, lat) {
 
 
 # Carrega todos pontos de solos
-solos = read_all_embrapa("./Data/Embrapa")
+
 
 # Salva dados para uso posterior
 saveRDS(solos, file="./Data/Embrapa_soil_raw.Rda")

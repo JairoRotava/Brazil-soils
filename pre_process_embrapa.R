@@ -2,7 +2,7 @@
 source("embrapa_util.R")
 
 # Salva dados para uso posterior
-solos <- readRDS("./Data/Embrapa_soil_raw.Rda")
+solos <- readRDS("./data/embrapa_soil_raw.Rda")
 
 
 # Processa dados e converte para SWAT
