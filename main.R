@@ -83,7 +83,7 @@ lib$embrapa$plot_sites(solos$lon_dec, solos$lat_dec)
 # ----
 
 # Arquivo para log dos erros de conversao
-LOG_FILE_NAME <- paste0("./logs/",
+LOG_FILE_NAME <- paste0("./log/",
                         format(Sys.time(), "%Y%m%dT%H%M%S"),
                         "_swat_convertion.log")
 
@@ -193,7 +193,8 @@ convert_to_swat <- function(x) {
 # Obtem ID unicos dos pontos da coluna "codigo.pa"
 ids <- unique(solos$codigo.pa)
 
-# Para DEBUG é interessante diminuir o numero de pontos.
+# Para DEBUG é interessante diminuir o numero de pontos, por isso 
+# seleciona somente alguns ids.
 #ids <- c(7081, 7082, 7086)
 ids <- ids[1:10]
 

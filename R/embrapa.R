@@ -88,10 +88,15 @@ plot_sites <- function (lon, lat) {
   
   
   
-  ggplot() +
-    geom_sf(data=states) +
-    geom_point(data = sites, aes(x = longitude, y = latitude), size=1)
+  #ggplot() +
+  #  geom_sf(data=states) +
+  #  geom_point(data = sites, aes(x = longitude, y = latitude), size=1)
+  p <- ggplot()
+  p <- p + geom_sf(data=states)
+  p <- p + geom_point(data = sites, aes(x = longitude, y = latitude), size=1)
+  print(p)
   
+    
 }
 
 
